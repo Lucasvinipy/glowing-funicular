@@ -56,12 +56,15 @@ public class Funcionario {
 
         // Desconto de faltas
         double descontoFaltas = (salarioBase / 30) * faltas;
+        
+        // Acrescimo hora extra
+        double horaExtra = salarioBase / 30 * horasExtras ;
 
         // Cálculo do salário líquido
-        return salarioBruto - inss - descontoVT - descontoFaltas;
+        return salarioBruto - inss - descontoVT - descontoFaltas + horaExtra;
     }
 
-    // Métodos Getters e Setters
+    // Métodos Getters e Setters    
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
     
